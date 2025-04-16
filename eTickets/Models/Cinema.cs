@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace eTickets.Models
 {
@@ -9,6 +10,8 @@ namespace eTickets.Models
 
         public string Logo { get; set; }
 
+
+        [DisplayName("Name of Cinema")]
         public string Name { get; set; }
 
         public string Description { get; set; }
