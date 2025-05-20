@@ -22,17 +22,20 @@ namespace eTickets.Data.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Movie>> GetAll()
+        public async Task<IEnumerable<Movie>> GetAllAsync()
         {
 
-            var data = await 
+            var data = await
                 _context.Movies.Include(n => n.Cinema).OrderBy(n => n.Name).ToListAsync();
             return data;
         }
 
-        public Movie GetById(int id)
+        public async Task<Movie> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+
+            var movie = await _context.Movies.Include(m => m.Cinema)
+                    .FirstOrDefaultAsync(m => m.Id == id);
+            return movie;
         }
 
         public Movie Update(int id, Movie actor)

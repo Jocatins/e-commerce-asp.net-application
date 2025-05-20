@@ -59,6 +59,7 @@ namespace eTickets.Controllers
             return RedirectToAction(nameof(Index));
         }
         // Get: Actors/Details/1
+        [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
             var actorDetails = await _service.GetByIdAsync(id);

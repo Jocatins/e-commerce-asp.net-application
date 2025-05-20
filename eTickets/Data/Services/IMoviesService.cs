@@ -4,9 +4,9 @@ namespace eTickets.Data.Services
 {
     public interface IMoviesService
     {
-        Task<IEnumerable<Movie>> GetAll();
+        Task<IEnumerable<Movie>> GetAllAsync();
 
-        Movie GetById(int id);
+        Task<Movie> GetByIdAsync(int id);
 
         void Add(Movie actor);
 

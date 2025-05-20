@@ -39,10 +39,12 @@
                     </ul>
 
                     <form class="form-inline my-2 my-lg-0" asp-controller="Home" asp-action="Filter" style="padding-right: 25px;">
-                        
-                        
-                        <input name="searchString" type="text" class="form-control" placeholder="Search for a movie..." aria-label="Search for a movie">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="bi bi-search"></i></button>
+                        <div class="position-relative">
+                            <input name="searchString" type="text" class="form-control pr-5" placeholder="Search for a movie..." aria-label="Search for a movie" style="padding-right: 2.5rem;">
+                            <button type="submit" class="btn position-absolute top-50 end-0 translate-middle-y me-2 p-0 border-0 bg-transparent">
+                                <i class="bi bi-search text-secondary"></i>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>
